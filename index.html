@@ -1,0 +1,1851 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width," initial-scale=1.0 />
+  <title>Supportsoft &mdash; Premium Mobile App Development Agency</title>
+  <meta name="description" content="We" build premium mobile apps that scale fast and convert users. AI integrations,
+    modern scalable backend systems. />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="loader-ring"></div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+
+    <div class="bg-glow blue-glow"></div>
+    <div class="bg-glow green-glow"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="container">
+
+      <!-- NAVBAR -->
+      <nav class="navbar-custom">
+        <div class="logo">
+          <img src="images/logo.svg" alt="Supportsoft" Logo>
+        </div>
+        <a href="#" class="nav-btn" id="book-consultation-btn">
+          Book Consultation
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </nav>
+
+      <!-- HERO ROW -->
+      <div class="row align-items-center hero-row">
+
+        <!-- LEFT -->
+        <div class="col-lg-6 hero-left">
+
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            AI Native App Development Company
+          </div>
+
+          <h1 class="hero-title">
+            We Build <em class="accent-word">Premium</em><br>
+            Mobile Apps That<br>
+            Scale &amp; Convert.
+          </h1>
+
+          <p class="hero-desc">
+            From idea to launch &mdash; we create powerful mobile applications with
+            modern UI/UX, AI integrations, and
+            scalable backend systems.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn-primary" id="get-estimate-btn">
+              Get Free Estimate
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+            <a href="#" class="btn-ghost" id="view-portfolio-btn">
+              View Portfolio
+            </a>
+          </div>
+
+          <!-- CERTIFICATION BADGES -->
+          <div class="hero-cert-badges">
+            <img src="images/1.webp" alt="Clutch Top App Development Company 2024" class="cert-img-badge">
+            <img src="images/2.webp" alt="ISO 9001:2015 Certified Company" class="cert-img-badge">
+            <img src="images/3.webp" alt="Clutch Top Software Developer 2024" class="cert-img-badge">
+            <img src="images/4.webp" alt="ISO 27001 Certified" class="cert-img-badge">
+          </div>
+
+          <!-- STATS -->
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-num">150+</div>
+              <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-num">99%</div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-num">24/7</div>
+              <div class="stat-label">Support Available</div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="col-lg-5 offset-lg-1">
+          <div class="form-card" id="form-card">
+
+            <div class="form-top-bar">
+              <div class="form-top-dot red"></div>
+              <div class="form-top-dot yellow"></div>
+              <div class="form-top-dot green-dot"></div>
+            </div>
+
+            <div class="form-header">
+              <h2>Get Your Free Estimate</h2>
+              <p>Describe your idea &mdash; we'll respond within 24 hours.</p>
+            </div>
+
+            <form id="estimateForm" novalidate>
+
+              <div class="field-group" id="group-full-name">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" placeholder="John Doe" autocomplete="name">
+                <span class="field-error" id="err-full-name"></span>
+              </div>
+
+              <div class="field-group" id="group-email-address">
+                <label for="email-address">Email Address <span class="optional-tag">Optional</span></label>
+                <input type="email" id="email-address" placeholder="you@company.com" autocomplete="email">
+                <span class="field-error" id="err-email-address"></span>
+              </div>
+
+              <div class="field-row">
+                <div class="field-group" style="flex:0 0 110px">
+                  <label for="country-code">Code</label>
+                  <select id="country-code" required>
+                    <option>+91</option>
+                    <option>+1</option>
+                    <option>+44</option>
+                    <option>+971</option>
+                    <option>+61</option>
+                    <option>+65</option>
+                  </select>
+                </div>
+                <div class="field-group" id="group-phone-number" style="flex:1">
+                  <label for="phone-number">Phone Number</label>
+                  <input type="tel" id="phone-number" placeholder="98XXXXXXXX" autocomplete="tel" maxlength="15">
+                  <span class="field-error" id="err-phone-number"></span>
+                </div>
+              </div>
+
+              <div class="field-group" id="group-app-type">
+                <label for="app-type">I'm looking to build...</label>
+                <select id="app-type">
+                  <option value="">Select app type</option>
+                  <option>E-commerce App</option>
+                  <option>Food Delivery App</option>
+                  <option>Dating App</option>
+                  <option>Gaming App</option>
+                  <option>Healthcare App</option>
+                  <option>Fitness App</option>
+                  <option>Education App</option>
+                  <option>Taxi Booking App</option>
+                  <option>Social Media App</option>
+                  <option>Real Estate App</option>
+                  <option>Fintech App</option>
+                  <option>OTT / Streaming App</option>
+                  <option>AI Based App</option>
+                  <option>Other</option>
+                </select>
+                <span class="field-error" id="err-app-type"></span>
+              </div>
+
+              <button type="submit" class="submit-btn" id="submit-btn">
+                <span id="btn-text">Get a Free Estimate</span>
+                <svg id="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+
+            </form>
+
+            <div class="form-footer">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              100% confidential &nbsp;&middot;&nbsp; No spam, ever
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS SECTION -->
+  <section class="awards-section">
+    <div class="container">
+      <div class="awards-grid">
+
+        <!-- Award 1 -->
+        <div class="award-item">
+          <div class="laurel-leaf laurel-left">
+            <img src="images/palm-branch-left.svg" alt="Palm Branch Left">
+          </div>
+          <div class="award-info">
+            <span class="award-source">Clutch Awards</span>
+            <h4 class="award-name">TOP SOFTWARE DEVELOPERS</h4>
+            <span class="award-year">2022</span>
+          </div>
+          <div class="laurel-leaf laurel-right">
+            <img src="images/palm-branch-right.svg" alt="Palm Branch Right">
+          </div>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="award-item">
+          <div class="laurel-leaf laurel-left">
+            <img src="images/palm-branch-left.svg" alt="Palm Branch Left">
+          </div>
+          <div class="award-info">
+            <span class="award-source">ScotlandIS</span>
+            <h4 class="award-name">DIGITAL TECH BUSINESS OF THE YEAR</h4>
+            <span class="award-year">2020</span>
+          </div>
+          <div class="laurel-leaf laurel-right">
+            <img src="images/palm-branch-right.svg" alt="Palm Branch Right">
+          </div>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="award-item">
+          <div class="laurel-leaf laurel-left">
+            <img src="images/palm-branch-left.svg" alt="Palm Branch Left">
+          </div>
+          <div class="award-info">
+            <span class="award-source">Edinburgh Chamber of Commerce</span>
+            <h4 class="award-name">NET ZERO SHORTLIST</h4>
+            <span class="award-year">2024</span>
+          </div>
+          <div class="laurel-leaf laurel-right">
+            <img src="images/palm-branch-right.svg" alt="Palm Branch Right">
+          </div>
+        </div>
+
+        <!-- Award 4 -->
+        <div class="award-item">
+          <div class="laurel-leaf laurel-left">
+            <img src="images/palm-branch-left.svg" alt="Palm Branch Left">
+          </div>
+          <div class="award-info">
+            <span class="award-source">TechBehemoths</span>
+            <h4 class="award-name">TOP UX/UI DESIGN AGENCY</h4>
+            <span class="award-year">2025</span>
+          </div>
+          <div class="laurel-leaf laurel-right">
+            <img src="images/palm-branch-right.svg" alt="Palm Branch Right">
+          </div>
+        </div>
+
+        <!-- Award 5 -->
+        <div class="award-item">
+          <div class="laurel-leaf laurel-left">
+            <img src="images/palm-branch-left.svg" alt="Palm Branch Left">
+          </div>
+          <div class="award-info">
+            <span class="award-source">TechBehemoths</span>
+            <h4 class="award-name">TOP UK MOBILE APP DEVELOPMENT AGENCY</h4>
+            <span class="award-year">2025</span>
+          </div>
+          <div class="laurel-leaf laurel-right">
+            <img src="images/palm-branch-right.svg" alt="Palm Branch Right">
+          </div>
+        </div>
+
+        <!-- Award 6 -->
+        <div class="award-item">
+          <div class="laurel-leaf laurel-left">
+            <img src="images/palm-branch-left.svg" alt="Palm Branch Left">
+          </div>
+          <div class="award-info">
+            <span class="award-source">TechBehemoths</span>
+            <h4 class="award-name">TOP CUSTOM SOFTWARE DEV AGENCY</h4>
+            <span class="award-year">2025</span>
+          </div>
+          <div class="laurel-leaf laurel-right">
+            <img src="images/palm-branch-right.svg" alt="Palm Branch Right">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR PROCESS SECTION (replaces Stage) -->
+  <section class="process-section">
+    <div class="process-bg-blob process-blob-1"></div>
+    <div class="process-bg-blob process-blob-2"></div>
+    <div class="container">
+
+      <div class="process-header">
+        <div class="section-chip">How We Work</div>
+        <h2>From Idea to Launch in <span class="text-blue">4 Clear Steps</span></h2>
+        <p>We follow a transparent, proven process so you always know whats happening
+          Ã¢â€ and whats coming next.</p>
+      </div>
+
+      <div class="process-steps">
+
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="process-step-num">01</div>
+          <div class="process-step-body">
+            <div class="process-step-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                <path
+                  d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+              </svg>
+            </div>
+            <div class="process-step-content">
+              <h3>Discovery Workshop</h3>
+              <p>We dig deep into your idea Ã¢â€ market, users, value proposition
+                Ã¢â€ and map your full User Flow. No
+                assumptions, just clarity.</p>
+              <div class="process-tags">
+                <span>User Flow Diagrams</span>
+                <span>Market Research</span>
+                <span>Tech Stack Planning</span>
+              </div>
+            </div>
+          </div>
+          <div class="process-connector"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="process-step-num">02</div>
+          <div class="process-step-body">
+            <div class="process-step-icon step-icon-green">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18M9 21V9" />
+              </svg>
+            </div>
+            <div class="process-step-content">
+              <h3>UI/UX Design & Branding</h3>
+              <p>Our designers turn your flow into stunning high-fidelity prototypes. Every pixel is crafted for
+                engagement, retention, and delight.</p>
+              <div class="process-tags">
+                <span>Figma Prototypes</span>
+                <span>Brand Identity</span>
+                <span>User Testing</span>
+              </div>
+            </div>
+          </div>
+          <div class="process-connector"></div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="process-step-num">03</div>
+          <div class="process-step-body">
+            <div class="process-step-icon step-icon-purple">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <div class="process-step-content">
+              <h3>Agile Development</h3>
+              <p>We build in sprints with regular demos. Clean code, iOS + Android + Web. You get full ownership of
+                every line we write.</p>
+              <div class="process-tags">
+                <span>iOS & Android</span>
+                <span>React Native / Flutter</span>
+                <span>Agile Sprints</span>
+              </div>
+            </div>
+          </div>
+          <div class="process-connector"></div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step">
+          <div class="process-step-num">04</div>
+          <div class="process-step-body">
+            <div class="process-step-icon step-icon-orange">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+            <div class="process-step-content">
+              <h3>Launch & Growth Support</h3>
+              <p>We stay with you post-launch. QA testing, App Store submissions, performance monitoring, and ongoing
+                updates Ã¢â€ were your long-term partner.</p>
+              <div class="process-tags">
+                <span>App Store Launch</span>
+                <span>QA Testing</span>
+                <span>Post-launch Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA at bottom -->
+      <div class="process-cta">
+        <p>Ready to start your journey?</p>
+        <a href="#" class="btn-primary" id="process-cta-btn">
+          Book Free Discovery Session
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- MID-PAGE CTA STRIP -->
+  <section class="cta-strip-section">
+    <div class="cta-strip-glow"></div>
+    <div class="container">
+      <div class="cta-strip-inner">
+        <div class="cta-strip-left">
+          <div class="cta-strip-chip">&#128640; Ready to build?</div>
+          <h2>Have an App Idea? Lets Turn It Into Reality.</h2>
+          <p>Weve helped 150+ startups and enterprises launch apps that users love. Your next milestone starts with a
+            free conversation.</p>
+        </div>
+        <div class="cta-strip-right">
+          <a href="#" class="btn-primary" cta-strip-btn id="cta-strip-btn">
+            Get Free Estimate
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="tel:1300921064" class="cta-strip-phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2z" />
+            </svg>
+            1300 92 10 64
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio-section">
+    <div class="port-bg-blob port-blob-blue"></div>
+    <div class="port-bg-blob port-blob-green"></div>
+    <div class="container">
+
+      <!-- Header -->
+      <div class="port-header">
+        <div class="port-header-left">
+          <div class="section-chip">Our Work</div>
+          <h2>Apps That <span class="text-blue">Define Industries</span></h2>
+          <p>150+ apps delivered across 40+ industries. Heres a glimpse of what we build.</p>
+        </div>
+        <div class="port-nav-controls">
+          <button id="portPrevBtn" class="port-nav-btn" aria-label="Previous Project">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <button id="portNextBtn" class="port-nav-btn" aria-label="Next Project">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Case Study Cards Slider -->
+      <div class="port-slider-container">
+        <div class="port-slider-track" id="portSliderTrack">
+
+          <!-- Project 1: Nexus Banking -->
+          <div class="port-cs-card" data-category="fintech">
+            <div class="port-cs-screens port-bg-papajohns">
+              <img src="images/portfolio_papajohns.jpg" alt="Papa Johns Pizza Delivery App" class="port-cs-full-img">
+            </div>
+            <div class="port-cs-info port-dark-panel">
+              <div class="port-cs-top">
+                <div class="port-cs-logo port-logo-blue">NX</div>
+                <a href="#" class="port-cs-explore">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg></a>
+              </div>
+              <div class="port-cs-body">
+                <h3>Nexus Global Banking App</h3>
+                <p>Multi-currency digital banking with AI fraud detection and real-time transfers across 50+ countries.
+                </p>
+                <div class="port-cs-tech">
+                  <span class="port-tech-label">Technology</span>
+                  <div class="port-tech-icons">
+                    <!-- Android -->
+                    <div class="port-tech-icon" title="Android"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zM14.5 2h-5L8 4H5v2h14V4h-3l-1.5-2z" />
+                      </svg></div>
+                    <!-- iOS -->
+                    <div class="port-tech-icon" title="iOS"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.18.06 2 .61 2.69.61.79 0 2.27-.76 3.82-.65 6.12.48 6.57 6.55 1.49 7.32zM12 6c.83 0 2.5-1 2.5-3S13 1 12 1 9.5 2 9.5 4s1.67 2 2.5 2z" />
+                      </svg></div>
+                    <!-- React -->
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Project 2: Vitality Fitness -->
+          <div class="port-cs-card" data-category="health">
+            <div class="port-cs-screens port-bg-papajohns">
+              <img src="images/portfolio_papajohns.jpg" alt="Papa" Johns Pizza Delivery App class="port-cs-full-img">
+            </div>
+            <div class="port-cs-info port-dark-panel">
+              <div class="port-cs-top">
+                <div class="port-cs-logo port-logo-green">VF</div>
+                <a href="#" class="port-cs-explore">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg></a>
+              </div>
+              <div class="port-cs-body">
+                <h3>Vitality Fitness Pro</h3>
+                <p>Personalised AI workout & nutrition tracking with wearable sync and live coaching sessions.</p>
+                <div class="port-cs-tech">
+                  <span class="port-tech-label">Technology</span>
+                  <div class="port-tech-icons">
+                    <div class="port-tech-icon" title="Android"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zM14.5 2h-5L8 4H5v2h14V4h-3l-1.5-2z" />
+                      </svg></div>
+                    <div class="port-tech-icon" title="iOS"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.18.06 2 .61 2.69.61.79 0 2.27-.76 3.82-.65 6.12.48 6.57 6.55 1.49 7.32zM12 6c.83 0 2.5-1 2.5-3S13 1 12 1 9.5 2 9.5 4s1.67 2 2.5 2z" />
+                      </svg></div>
+                    <div class="port-tech-icon" title="Flutter"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z" />
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Project 3: Crave Delivery -->
+          <div class="port-cs-card" data-category="food">
+            <div class="port-cs-screens port-bg-papajohns">
+              <img src="images/portfolio_papajohns.jpg" alt="Papa" Johns Pizza Delivery App class="port-cs-full-img">
+            </div>
+            <div class="port-cs-info port-dark-panel">
+              <div class="port-cs-top">
+                <div class="port-cs-logo port-logo-orange">CR</div>
+                <a href="#" class="port-cs-explore">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg></a>
+              </div>
+              <div class="port-cs-body">
+                <h3>Crave Food Delivery App</h3>
+                <p>Full-stack food delivery with 3-sided marketplace: customers, restaurants, and real-time driver
+                  tracking.</p>
+                <div class="port-cs-tech">
+                  <span class="port-tech-label">Technology</span>
+                  <div class="port-tech-icons">
+                    <div class="port-tech-icon" title="Android"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zM14.5 2h-5L8 4H5v2h14V4h-3l-1.5-2z" />
+                      </svg></div>
+                    <div class="port-tech-icon" title="iOS"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.18.06 2 .61 2.69.61.79 0 2.27-.76 3.82-.65 6.12.48 6.57 6.55 1.49 7.32zM12 6c.83 0 2.5-1 2.5-3S13 1 12 1 9.5 2 9.5 4s1.67 2 2.5 2z" />
+                      </svg></div>
+                    <div class="port-tech-icon" title="React Native"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="2.5" />
+                        <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.2" />
+                        <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.2"
+                          transform="rotate(60 12 12)" />
+                        <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.2"
+                          transform="rotate(120 12 12)" />
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Project 4: Aura Crypto -->
+          <div class="port-cs-card" data-category="web3">
+            <div class="port-cs-screens port-bg-papajohns">
+              <img src="images/portfolio_papajohns.jpg" alt="Papa" Johns Pizza Delivery App class="port-cs-full-img">
+            </div>
+            <div class="port-cs-info port-dark-panel">
+              <div class="port-cs-top">
+                <div class="port-cs-logo port-logo-purple">AX</div>
+                <a href="#" class="port-cs-explore">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg></a>
+              </div>
+              <div class="port-cs-body">
+                <h3>Aura Crypto Exchange</h3>
+                <p>Non-custodial DEX with real-time order books, multi-chain wallet & institutional-grade security.</p>
+                <div class="port-cs-tech">
+                  <span class="port-tech-label">Technology</span>
+                  <div class="port-tech-icons">
+                    <div class="port-tech-icon" title="Android"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zM14.5 2h-5L8 4H5v2h14V4h-3l-1.5-2z" />
+                      </svg></div>
+                    <div class="port-tech-icon" title="iOS"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.18.06 2 .61 2.69.61.79 0 2.27-.76 3.82-.65 6.12.48 6.57 6.55 1.49 7.32zM12 6c.83 0 2.5-1 2.5-3S13 1 12 1 9.5 2 9.5 4s1.67 2 2.5 2z" />
+                      </svg></div>
+                    <div class="port-tech-icon" title="Web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                          d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Project 5: Papa Johns -->
+          <div class="port-cs-card" data-category="food">
+            <div class="port-cs-screens port-bg-papajohns">
+              <img src="images/portfolio_papajohns.jpg" alt="Papa" Johns Pizza Delivery App class="port-cs-full-img">
+            </div>
+            <div class="port-cs-info port-dark-panel">
+              <div class="port-cs-top">
+                <div class="port-cs-logo port-logo-red">PJ</div>
+                <a href="#" class="port-cs-explore">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg></a>
+              </div>
+              <div class="port-cs-body">
+                <h3>Papa Johns Pizza Delivery App</h3>
+                <p>Papa Johns on-demand pizza delivery application with real-time order tracking, menu customization &
+                  loyalty rewards.</p>
+                <div class="port-cs-tech">
+                  <span class="port-tech-label">Technology</span>
+                  <div class="port-tech-icons">
+                    <div class="port-tech-icon" title="Android"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zM14.5 2h-5L8 4H5v2h14V4h-3l-1.5-2z" />
+                      </svg></div>
+                    <div class="port-tech-icon" title="iOS"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.18.06 2 .61 2.69.61.79 0 2.27-.76 3.82-.65 6.12.48 6.57 6.55 1.49 7.32zM12 6c.83 0 2.5-1 2.5-3S13 1 12 1 9.5 2 9.5 4s1.67 2 2.5 2z" />
+                      </svg></div>
+                    <div class="port-tech-icon" title="Swift"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M21.985 12.81c.02-.17.015-.34.015-.51C22 6.476 17.523 2 12 2S2 6.476 2 12c0 5.185 3.947 9.449 9 9.95V14.5H8.5V12H11V9.75C11 7.394 12.394 6 14.75 6c1.125 0 2.25.2 2.25.2v2.475h-1.269c-1.245 0-1.631.782-1.631 1.5V12H17l-.5 2.5H14.1V21.95c5.053-.501 9-4.765 9-9.95 0-.047-.002-.094-.002-.14l-.113-.001z" />
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div><!-- /port-slider-track -->
+      </div><!-- /port-slider-container -->
+
+      <!-- Footer CTA -->
+      <div class="port-footer-cta">
+        <p>Want to see more of our work?</p>
+        <a href="#" class="port-view-all" id="view-all-projects">
+          View All 150+ Projects
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS / NUMBERS SECTION -->
+  <section class="stats-section d-none">
+    <div class="stats-inner-band">
+      <div class="stats-header">
+        <h2>Numbers <span class="text-blue">That Speak</span> for Themselves!</h2>
+        <p>Real numbers that reflect our experience and results.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="stat-value"><span class="counter" data-target="10">0</span>+</div>
+          <p>YEARS EXPERIENCE</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+              </path>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+              </path>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+            </svg>
+          </div>
+          <div class="stat-value"><span class="counter" data-target="150">0</span>+</div>
+          <p>APPS DEVELOPED</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+          </div>
+          <div class="stat-value"><span class="counter" data-target="40">0</span>+</div>
+          <p>INDUSTRIES COVERED</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="stat-value"><span class="counter" data-target="100">0</span>+</div>
+          <p>TECH ENTHUSIASTS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+
+  <!-- SERVICES SECTION -->
+  <section class="services-section">
+    <div class="container">
+
+      <div class="services-section-header">
+        <div class="section-chip">What We Build</div>
+        <h2>End-to-End <span class="text-blue">Digital Services</span></h2>
+        <p>From discovery to deployment &mdash; we craft every layer of your product with precision, purpose, and
+          pixel-perfect quality.</p>
+      </div>
+
+      <!-- SERVICES GRID -->
+      <div class="svc-grid">
+
+        <!-- Card 1: Mobile App Development -->
+        <div class="svc-card svc-mobile">
+          <div class="svc-graphic">
+            <div class="svc-phone-frame">
+              <div class="svc-phone-notch"></div>
+              <div class="svc-phone-screen">
+                <div class="svc-app-bar"></div>
+                <div class="svc-app-content">
+                  <div class="svc-app-row svc-app-row--wide svc-highlight"></div>
+                  <div class="svc-app-row"></div>
+                  <div class="svc-app-row svc-app-row--med"></div>
+                  <div class="svc-app-grid">
+                    <div class="svc-app-cell"></div>
+                    <div class="svc-app-cell svc-highlight2"></div>
+                    <div class="svc-app-cell"></div>
+                    <div class="svc-app-cell svc-highlight2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="svc-float-badge svc-fb-android">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#3ddc84">
+                <path
+                  d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10z" />
+              </svg>
+              Android
+            </div>
+            <div class="svc-float-badge svc-fb-ios">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#aaa">
+                <path
+                  d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.18.06 2 .61 2.69.61.79 0 2.27-.76 3.82-.65 6.12.48 6.57 6.55 1.49 7.32z" />
+              </svg>
+              iOS
+            </div>
+          </div>
+          <div class="svc-body">
+            <div class="svc-icon-box svc-icon-blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg>
+            </div>
+            <h3>Mobile App Development</h3>
+            <p>Native &amp; cross-platform apps for iOS and Android &mdash; built for performance, designed to convert.
+            </p>
+            <div class="svc-tags">
+              <span>React Native</span><span>Flutter</span><span>Swift</span><span>Kotlin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Web Development -->
+        <div class="svc-card svc-web">
+          <div class="svc-graphic">
+            <div class="svc-browser-frame">
+              <div class="svc-browser-bar">
+                <span class="svc-dot svc-dot-r"></span>
+                <span class="svc-dot svc-dot-y"></span>
+                <span class="svc-dot svc-dot-g"></span>
+                <div class="svc-url-bar"></div>
+              </div>
+              <div class="svc-browser-body">
+                <div class="svc-web-hero"></div>
+                <div class="svc-web-grid">
+                  <div class="svc-web-col svc-web-col--wide">
+                    <div class="svc-web-block"></div>
+                    <div class="svc-web-block svc-web-block--short"></div>
+                  </div>
+                  <div class="svc-web-col">
+                    <div class="svc-web-card svc-highlight"></div>
+                    <div class="svc-web-card"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="svc-code-snippet">
+              <span class="svc-code-kw">const</span> <span class="svc-code-fn">App</span> <span
+                class="svc-code-kw">=</span> () =&gt; &lt;<span class="svc-code-tag">div</span>&gt;
+            </div>
+          </div>
+          <div class="svc-body">
+            <div class="svc-icon-box svc-icon-purple">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>Blazing-fast, SEO-optimised web apps and SaaS platforms that scale with your business growth.</p>
+            <div class="svc-tags">
+              <span>Next.js</span><span>React</span><span>Node.js</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: UI/UX Design -->
+        <div class="svc-card svc-design">
+          <div class="svc-graphic">
+            <div class="svc-design-canvas">
+              <div class="svc-layers">
+                <div class="svc-layer svc-layer--active">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="#4F6EF7">
+                    <rect width="24" height="24" rx="4" />
+                  </svg>
+                  <span>Hero Section</span>
+                </div>
+                <div class="svc-layer">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="#2ECC71">
+                    <circle cx="12" cy="12" r="12" />
+                  </svg>
+                  <span>Button CTA</span>
+                </div>
+                <div class="svc-layer">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="#FF6B6B">
+                    <rect width="24" height="24" rx="12" />
+                  </svg>
+                  <span>Typography</span>
+                </div>
+              </div>
+              <div class="svc-artboard">
+                <div class="svc-ab-header"></div>
+                <div class="svc-ab-hero"></div>
+                <div class="svc-ab-row">
+                  <div class="svc-ab-btn svc-highlight"></div>
+                  <div class="svc-ab-btn svc-ab-btn--ghost"></div>
+                </div>
+                <div class="svc-ab-cards">
+                  <div class="svc-ab-card"></div>
+                  <div class="svc-ab-card svc-highlight2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="svc-palette">
+              <span style="background:#4F6EF7"></span>
+              <span style="background:#2ECC71"></span>
+              <span style="background:#FF6B6B"></span>
+              <span style="background:#FFC107"></span>
+              <span style="background:#1a1d2e"></span>
+            </div>
+          </div>
+          <div class="svc-body">
+            <div class="svc-icon-box svc-icon-pink">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <circle cx="11" cy="11" r="2" />
+              </svg>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Stunning Figma prototypes and design systems that turn complex flows into delightful user journeys.</p>
+            <div class="svc-tags">
+              <span>Figma</span><span>Prototyping</span><span>Design System</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Branding -->
+        <div class="svc-card svc-brand">
+          <div class="svc-graphic">
+            <div class="svc-brand-showcase">
+              <div class="svc-logo-mark">
+                <svg viewBox="0 0 80 80" width="72" height="72">
+                  <defs>
+                    <linearGradient id="svc-lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#4F6EF7" />
+                      <stop offset="100%" style="stop-color:#a78bfa" />
+                    </linearGradient>
+                  </defs>
+                  <polygon points="40,8 68,24 68,56 40,72 12,56 12,24" fill="url(#svc-lg1)" opacity="0.15"
+                    stroke="url(#svc-lg1)" stroke-width="2" />
+                  <polygon points="40,18 60,29 60,51 40,62 20,51 20,29" fill="url(#svc-lg1)" opacity="0.2" />
+                  <text x="40" y="46" text-anchor="middle" fill="url(#svc-lg1)" font-size="20" font-weight="900"
+                    font-family="Outfit,sans-serif">S</text>
+                </svg>
+              </div>
+              <div class="svc-swatches">
+                <div class="svc-swatch" style="background:linear-gradient(135deg,#4F6EF7,#a78bfa)"></div>
+                <div class="svc-swatch" style="background:linear-gradient(135deg,#2ECC71,#1aab5f)"></div>
+                <div class="svc-swatch" style="background:linear-gradient(135deg,#FF6B6B,#ee4444)"></div>
+                <div class="svc-swatch svc-swatch--sm" style="background:#1a1d2e"></div>
+                <div class="svc-swatch svc-swatch--sm" style="background:#f0f1f7;border:1px solid #e0e0e0"></div>
+              </div>
+              <div class="svc-typespec">
+                <span class="svc-type-h">Aa</span>
+                <span class="svc-type-sub">Brand Typeface</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-body">
+            <div class="svc-icon-box svc-icon-orange">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </div>
+            <h3>Branding &amp; Identity</h3>
+            <p>Logo, colour palette, typography, and brand guidelines that make your product instantly recognisable.</p>
+            <div class="svc-tags">
+              <span>Logo Design</span><span>Guidelines</span><span>Moodboard</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: AI & Backend -->
+        <div class="svc-card svc-ai">
+          <div class="svc-graphic">
+            <div class="svc-ai-visual">
+              <svg class="svc-neural" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="40" r="10" fill="rgba(79,110,247,0.2)" stroke="#4F6EF7" stroke-width="1.5" />
+                <circle cx="30" cy="70" r="10" fill="rgba(79,110,247,0.2)" stroke="#4F6EF7" stroke-width="1.5" />
+                <circle cx="30" cy="100" r="10" fill="rgba(79,110,247,0.2)" stroke="#4F6EF7" stroke-width="1.5" />
+                <circle cx="100" cy="30" r="12" fill="rgba(167,139,250,0.25)" stroke="#a78bfa" stroke-width="1.5" />
+                <circle cx="100" cy="70" r="12" fill="rgba(167,139,250,0.4)" stroke="#a78bfa" stroke-width="2" />
+                <circle cx="100" cy="110" r="12" fill="rgba(167,139,250,0.25)" stroke="#a78bfa" stroke-width="1.5" />
+                <circle cx="170" cy="50" r="10" fill="rgba(46,204,113,0.2)" stroke="#2ECC71" stroke-width="1.5" />
+                <circle cx="170" cy="90" r="10" fill="rgba(46,204,113,0.2)" stroke="#2ECC71" stroke-width="1.5" />
+                <line x1="40" y1="40" x2="88" y2="32" stroke="#4F6EF7" stroke-width="0.8" opacity="0.5" />
+                <line x1="40" y1="40" x2="88" y2="70" stroke="#4F6EF7" stroke-width="0.8" opacity="0.5" />
+                <line x1="40" y1="70" x2="88" y2="70" stroke="#4F6EF7" stroke-width="1.2" opacity="0.7" />
+                <line x1="40" y1="70" x2="88" y2="110" stroke="#4F6EF7" stroke-width="0.8" opacity="0.3" />
+                <line x1="40" y1="100" x2="88" y2="70" stroke="#4F6EF7" stroke-width="0.8" opacity="0.5" />
+                <line x1="40" y1="100" x2="88" y2="110" stroke="#4F6EF7" stroke-width="0.8" opacity="0.5" />
+                <line x1="112" y1="32" x2="160" y2="52" stroke="#a78bfa" stroke-width="0.8" opacity="0.5" />
+                <line x1="112" y1="70" x2="160" y2="52" stroke="#a78bfa" stroke-width="1.2" opacity="0.7" />
+                <line x1="112" y1="70" x2="160" y2="90" stroke="#a78bfa" stroke-width="1.2" opacity="0.7" />
+                <line x1="112" y1="110" x2="160" y2="90" stroke="#a78bfa" stroke-width="0.8" opacity="0.5" />
+                <text x="100" y="74" text-anchor="middle" fill="#a78bfa" font-size="7" font-family="Outfit">AI</text>
+              </svg>
+              <div class="svc-ai-chip svc-ai-chip--1">&#128200; Prediction: 97.4%</div>
+              <div class="svc-ai-chip svc-ai-chip--2">&#9889; 12ms Inference</div>
+            </div>
+          </div>
+          <div class="svc-body">
+            <div class="svc-icon-box svc-icon-violet">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              </svg>
+            </div>
+            <h3>AI &amp; Backend Architecture</h3>
+            <p>Scalable cloud infrastructure, ML pipelines, and smart APIs that give your product a lasting competitive
+              edge.</p>
+            <div class="svc-tags">
+              <span>OpenAI</span><span>AWS</span><span>GraphQL</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: QA & Launch -->
+        <div class="svc-card svc-qa">
+          <div class="svc-graphic">
+            <div class="svc-qa-visual">
+              <div class="svc-test-list">
+                <div class="svc-test-item svc-test-pass">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span>User Auth Flow</span><span class="svc-test-ms">12ms</span>
+                </div>
+                <div class="svc-test-item svc-test-pass">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span>Payment Gateway</span><span class="svc-test-ms">8ms</span>
+                </div>
+                <div class="svc-test-item svc-test-pass">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span>Push Notifications</span><span class="svc-test-ms">5ms</span>
+                </div>
+                <div class="svc-test-item svc-test-run">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFC107">
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                  <span>Performance</span><span class="svc-test-ms">running</span>
+                </div>
+              </div>
+              <div class="svc-score-ring">
+                <svg viewBox="0 0 80 80" width="72" height="72">
+                  <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(46,204,113,0.15)" stroke-width="8" />
+                  <circle cx="40" cy="40" r="34" fill="none" stroke="#2ECC71" stroke-width="8"
+                    stroke-dasharray="197 213" stroke-dashoffset="52" stroke-linecap="round" />
+                  <text x="40" y="38" text-anchor="middle" fill="#2ECC71" font-size="16" font-weight="900"
+                    font-family="Outfit">98</text>
+                  <text x="40" y="52" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8"
+                    font-family="Outfit">Score</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="svc-body">
+            <div class="svc-icon-box svc-icon-green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+            <h3>QA Testing &amp; Launch</h3>
+            <p>Rigorous automated &amp; manual testing across all devices, followed by smooth App Store &amp; Play Store
+              deployment.</p>
+            <div class="svc-tags">
+              <span>App Store</span><span>Play Store</span><span>CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /svc-grid -->
+
+    </div>
+  </section>
+  </section>
+
+
+
+
+
+  <!-- WHY CHOOSE US SECTION -->
+  <section class="why-choose-section">
+    <div class="container">
+      <div class="why-header">
+        <div class="section-chip">Why Choose Us</div>
+        <h2>Why <span>Choose Us</span></h2>
+        <p>We believe in transparency, focus, and delivering exceptional results Ã¢â€
+          every single time.</p>
+      </div>
+
+      <div class="why-grid">
+
+        <!-- Card 1 -->
+        <div class="why-card">
+          <div class="card-glow blue-glow-hover"></div>
+          <div class="why-icon-box blue-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 16v-4"></path>
+              <path d="M12 8h.01"></path>
+            </svg>
+          </div>
+          <div class="why-content">
+            <span class="why-subtitle text-blue">TRANSPARENT PRICING</span>
+            <h3>You know the number before you commit.</h3>
+            <p>After the Discovery Session, you receive a fixed-price proposal with a locked scope. No vague day rates.
+              No hidden extras. No invoice surprises. If the scope changes, we tell you before we build
+              Ã¢â€ not after.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="why-card">
+          <div class="card-glow green-glow-hover"></div>
+          <div class="why-icon-box green-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <div class="why-content">
+            <span class="why-subtitle text-green">LOCKED SCOPE</span>
+            <h3>Development doesnt begin until we agree on exactly what were building.</h3>
+            <p>The Software Requirements Specification Document is produced before sprint one. It defines whats in,
+              whats out, and what success looks like. It protects you from scope creep. It protects us from building
+              the wrong thing. Its why our projects land on time.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="why-card">
+          <div class="card-glow purple-glow-hover"></div>
+          <div class="why-icon-box purple-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="why-content">
+            <span class="why-subtitle text-purple">NAMED TEAM</span>
+            <h3>You always know whos working on your product.</h3>
+            <p>Same Account Manager. Same Engineering Manager. From kickoff through post-launch. No handoffs to junior
+              staff after the sale. No re-onboarding a new team six months in. The people who start your project are the
+              people who finish it.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="why-card">
+          <div class="card-glow orange-glow-hover"></div>
+          <div class="why-icon-box orange-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0
+                1-2-2v-7a2 2 0 0 1 2-2"></path>
+            </svg>
+          </div>
+          <div class="why-content">
+            <span class="why-subtitle text-orange">HONEST FIT</span>
+            <h3>If were not right for you, well tell you before you engage us.</h3>
+            <p>A long-term partnership with the right client is worth more than a short engagement with the wrong
+              one.
+              If your brief isnt something we can deliver to our standard, well say so
+              Ã¢â€ and point you in the right
+              direction. Thats not a sales line. Its how weve maintained a 97% client retention rate for twenty
+              years.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- OUR CLIENTS SECTION -->
+  <section class="clients-section">
+    <div class="container">
+
+      <div class="clients-header">
+        <div class="section-chip">Our Clients</div>
+        <h2>Trusted by <span class="text-blue">Startups & Enterprises</span> Worldwide</h2>
+        <p>Weve partnered with ambitious companies across fintech, health, retail, logistics, and more to build
+          products their users love.</p>
+      </div>
+
+      <div class="clients-grid">
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_1.webp" alt="" srcset="">
+          </div>
+
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_2.webp" alt="" srcset="">
+          </div>
+
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_3.webp" alt="" srcset="">
+          </div>
+
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_4.webp" alt="" srcset="">
+          </div>
+
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_5.webp" alt="" srcset="">
+          </div>
+
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_6.webp" alt="" srcset="">
+          </div>
+
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_13.webp" alt="" srcset="">
+          </div>
+
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_14.webp" alt="" srcset="">
+          </div>
+
+        </div>
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_14.webp" alt="" srcset="">
+          </div>
+
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_15.webp" alt="" srcset="">
+          </div>
+
+        </div>
+
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_16.webp" alt="" srcset="">
+          </div>
+
+        </div>
+        <div class="client-card">
+          <div class="client-logo-box">
+            <img src="images/client_17.webp" alt="" srcset="">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="clients-stats-bar">
+        <div class="client-stat">
+          <span class="cs-num">150+</span>
+          <span class="cs-label">Happy Clients</span>
+        </div>
+        <div class="cs-sep"></div>
+        <div class="client-stat">
+          <span class="cs-num">40+</span>
+          <span class="cs-label">Industries Served</span>
+        </div>
+        <div class="cs-sep"></div>
+        <div class="client-stat">
+          <span class="cs-num">12+</span>
+          <span class="cs-label">Countries</span>
+        </div>
+        <div class="cs-sep"></div>
+        <div class="client-stat">
+          <span class="cs-num">99%</span>
+          <span class="cs-label">Client Retention</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="reviews-wrapper">
+
+        <!-- Left Side: Titles -->
+        <div class="reviews-text">
+          <span class="reviews-subtitle">Reviews</span>
+          <h2>See what our<br>clients say.</h2>
+        </div>
+
+        <!-- Right Side: Slider/Card -->
+        <div class="reviews-slider">
+
+          <!-- Image -->
+          <div class="reviews-image-wrapper">
+            <img src="images/review_bg.png" alt="Client Background" class="reviews-bg-image" id="reviewBgImage">
+
+            <!-- Controls -->
+            <div class="reviews-controls">
+              <button class="control-btn prev-btn" id="reviewPrevBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </button>
+              <button class="control-btn next-btn" id="reviewNextBtn">
+                Next
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Vertical Counter -->
+            <div class="reviews-counter">
+              <span id="reviewCounter">01 / 03</span>
+            </div>
+          </div>
+
+          <!-- Overlapping Card -->
+          <div class="reviews-card">
+            <div class="card-deco-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="4" width="20" height="2" rx="1" />
+                <rect x="6" y="11" width="12" height="2" rx="1" />
+                <rect x="2" y="18" width="20" height="2" rx="1" />
+              </svg>
+            </div>
+
+            <div class="reviewer-info">
+              <img src="images/review_avatar.png" alt="Reviewer" class="reviewer-avatar" id="reviewAvatarImage">
+              <div class="reviewer-details">
+                <strong id="reviewNameText">Jack Preddy</strong>
+                <span id="reviewTitleText">CEO, Optimize Mind Performance</span>
+              </div>
+            </div>
+
+            <p class="review-quote" id="reviewQuoteText">Theyve been really helpful throughout the process.</p>
+
+            <a href="#" class="review-link">Check out our <span class="text-green">case study</span>.</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="final-cta-section">
+    <div class="final-cta-glow-1"></div>
+    <div class="final-cta-glow-2"></div>
+    <div class="final-cta-grid"></div>
+    <div class="container">
+      <div class="final-cta-inner">
+        <div class="final-cta-chip">Free Consultation &mdash; No Commitment</div>
+        <h2 class="final-cta-title">Ready to Build the App<br>Your Customers Will Love?</h2>
+        <p class="final-cta-desc">Share your idea with us and get a detailed estimate within 24 hours
+          Ã¢â€ completely
+          free. 150+ successful apps delivered across 40+ industries.</p>
+        <div class="final-cta-actions">
+          <a href="#" class="final-cta-btn-primary" id="final-cta-btn">
+            Get My Free Estimate
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="tel:1300921064" class="final-cta-btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2z" />
+            </svg>
+            Call 1300 92 10 64
+          </a>
+        </div>
+        <div class="final-cta-trust">
+          <span>&#10003; No credit card required</span>
+          <span>&#10003; Response within 24 hours</span>
+          <span>&#10003; 100% confidential</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <div class="faq-glow faq-glow-left"></div>
+    <div class="faq-glow faq-glow-right"></div>
+    <div class="container">
+      <div class="faq-wrapper">
+
+        <!-- Left Side: Title & CTA -->
+        <div class="faq-left">
+          <h2>
+            Frequently Asked
+            <br>
+            <span class="highlight-text">Questions
+              <svg class="swoosh" viewBox="0 0 120 20" fill="none">
+                <path d="M5 15Q50 0 115 15" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </span>
+          </h2>
+          <p class="faq-desc">
+            Have questions about our process, pricing, or capabilities? We have answered the most common inquiries
+            here.
+            If you need more details, feel free to reach out directly through our contact form.
+          </p>
+        </div>
+
+        <!-- Right Side: Accordion -->
+        <div class="faq-accordion">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is your transparency and communication during projects?</span>
+              <div class="faq-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p>We maintain full transparency through regular updates, daily stand-ups, and a dedicated project manager
+                who is always available to answer your questions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What are your major strengths in development strategy and implementation?</span>
+              <div class="faq-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p>Our strengths lie in our rigorous planning phase, agile methodology, and a highly skilled team of
+                senior developers who ensure robust and scalable implementations.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is your approach to transparency and communication in projects?</span>
+              <div class="faq-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p>We utilize industry-standard project management tools, giving you direct access to track progress, view
+                milestones, and provide feedback in real-time.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What are your strengths in development strategy and implementation?</span>
+              <div class="faq-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p>We focus on delivering MVP quickly, iterating based on user feedback, and scaling the architecture
+                efficiently using cloud-native technologies.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do you innovate and deliver quality in all projects?</span>
+              <div class="faq-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <p>We invest heavily in R&D, continuous learning, and strict QA processes including automated testing and
+                peer code reviews to ensure top-tier quality.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="grid-overlay"></div>
+    <div class="contact-glow contact-glow-1"></div>
+    <div class="contact-glow contact-glow-2"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="row align-items-center">
+
+        <!-- Left Side: Contact Info -->
+        <div class="col-lg-6 contact-left">
+          <h2 class="contact-title">Starting a new project<br>with us? <span class="highlight-text">Lets talk
+              <svg class="swoosh" viewBox="0 0 120 20" fill="none">
+                <path d="M5 15Q50 0 115 15" stroke="var(--blue)" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </span></h2>
+
+          <div class="company-brand-name">SUPPORTSOFT TECHNOLOGIES
+          </div>
+
+          <div class="contact-info-block">
+            <div class="contact-info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-info-content">
+              <strong>Our Office</strong>
+              <p>Suite 2D, Level 2/1C Grand Ave, Camellia NSW 2142, Australia</p>
+              <a href="https://maps.google.com/?q=Suite+2D,+Level+2/1C+Grand+Ave,+Camellia+NSW+2142,+Australia"
+                target="_blank" class="contact-map-link">View Map &#8599;</a>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="contact-info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </div>
+            <div class="contact-info-content">
+              <strong>Call Us</strong>
+              <p><a href="tel:1300921064">1300 92 10 64</a> &nbsp;|&nbsp; <a href="tel:+61404606689">+61 404 606 689</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="contact-info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-info-content">
+              <strong>Email Address</strong>
+              <p><a href="mailto:info@supportsoft.com.au">info@supportsoft.com.au</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side: The Form -->
+        <div class="col-lg-5 offset-lg-1 contact-right">
+          <div class="form-card">
+            <div class="form-top-bar">
+              <div class="form-top-dot red"></div>
+              <div class="form-top-dot yellow"></div>
+              <div class="form-top-dot green-dot"></div>
+            </div>
+
+            <div class="form-header">
+              <h2>Get Your Free Estimate</h2>
+              <p>Describe your idea Ã¢â€ well respond within 24 hours.</p>
+            </div>
+
+            <form id="contactEstimateForm" novalidate>
+              <div class="field-group">
+                <label for="contact-full-name">Full Name</label>
+                <input type="text" id="contact-full-name" placeholder="John Doe" autocomplete="name">
+              </div>
+
+              <div class="field-group">
+                <label for="contact-email-address">Email Address <span class="optional-tag">Optional</span></label>
+                <input type="email" id="contact-email-address" placeholder="you@company.com" autocomplete="email">
+              </div>
+
+              <div class="field-row">
+                <div class="field-group" style="flex:0 0 110px">
+                  <label for="contact-country-code">Code</label>
+                  <select id="contact-country-code">
+                    <option>+91</option>
+                    <option>+1</option>
+                    <option>+44</option>
+                    <option>+971</option>
+                    <option>+61</option>
+                    <option>+65</option>
+                  </select>
+                </div>
+                <div class="field-group" style="flex:1">
+                  <label for="contact-phone-number">Phone Number</label>
+                  <input type="tel" id="contact-phone-number" placeholder="98XXXXXXXX" autocomplete="tel"
+                    maxlength="15">
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="contact-app-type">I'm looking to build...</label>
+                <select id="contact-app-type">
+                  <option value="">Select app type</option>
+                  <option>E-commerce App</option>
+                  <option>Food Delivery App</option>
+                  <option>Dating App</option>
+                  <option>Gaming App</option>
+                  <option>Healthcare App</option>
+                  <option>Fitness App</option>
+                  <option>Education App</option>
+                  <option>Taxi Booking App</option>
+                  <option>Social Media App</option>
+                  <option>Real Estate App</option>
+                  <option>Fintech App</option>
+                  <option>OTT / Streaming App</option>
+                  <option>AI Based App</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <span>Get a Free Estimate</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+            </form>
+
+            <div class="form-footer">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              100% confidential &nbsp;&middot;&nbsp; No spam, ever
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-glow footer-glow-1"></div>
+    <div class="footer-glow footer-glow-2"></div>
+
+    <div class="container">
+
+      <!-- Top Row -->
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="Supportsoft" Logo class="footer-logo">
+          <p class="footer-tagline">We build premium mobile apps that scale fast and convert users. AI integrations,
+            modern UI/UX, scalable backend systems.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Mobile App Development</a></li>
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">AI & Backend</a></li>
+            <li><a href="#">Custom App Development</a></li>
+            <li><a href="#">Discovery Workshop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:1300921064">1300 92 10 64</a></li>
+            <li><a href="tel:+61404606689">+61 404 606 689</a></li>
+            <li><a href="mailto:info@supportsoft.com.au">info@supportsoft.com.au</a></li>
+            <li><a href="#">Suite 2D, Level 2/1C Grand Ave,<br>Camellia NSW 2142, Australia</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 Supportsoft Technologies. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Help Center</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
