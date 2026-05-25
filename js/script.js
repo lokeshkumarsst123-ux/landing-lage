@@ -216,8 +216,9 @@ if (statsSection) {
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.stage-tab');
   const panes = document.querySelectorAll('.stage-pane');
+  const progressFill = document.querySelector('.stepper-progress-fill');
 
-  tabs.forEach(tab => {
+  tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => {
       // Remove active class from all tabs and panes
       tabs.forEach(t => t.classList.remove('active'));
@@ -226,11 +227,24 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add active class to clicked tab
       tab.classList.add('active');
 
+      // Update vertical progress line fill height
+      if (progressFill) {
+        const percent = (index / (tabs.length - 1)) * 100;
+        progressFill.style.height = `${percent}%`;
+      }
+
       // Show corresponding pane
       const targetId = tab.getAttribute('data-target');
       const targetPane = document.getElementById(targetId);
       if (targetPane) {
         targetPane.classList.add('active');
+      }
+
+      // Update browser address path dynamically
+      const pathSpan = document.getElementById('active-stage-path');
+      if (pathSpan) {
+        const cleanPath = targetId.replace('stage-', '') + '-stage';
+        pathSpan.textContent = cleanPath;
       }
     });
   });
@@ -386,6 +400,275 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (e.key === 'ArrowRight') {
         currentPortIndex = (currentPortIndex + 1) % totalPortCards;
         updatePortSlider();
+      }
+    });
+  }
+
+  // ========================
+  // DISCOVERY MODAL LOGIC
+  // ========================
+  const getEstimateBtn = document.getElementById('get-estimate-btn');
+  const discoveryModal = document.getElementById('discovery-modal');
+  const discoveryModalClose = document.getElementById('discovery-modal-close');
+  const discoveryModalBackdrop = document.getElementById('discovery-modal-backdrop');
+  const discoveryForm = document.getElementById('discoveryForm');
+
+  function openModal() {
+    if (discoveryModal) {
+      discoveryModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeModal() {
+    if (discoveryModal) {
+      discoveryModal.classList.remove('active');
+      document.body.style.overflow = '';
+      
+      // Clear validation states
+      clearState('group-disc-first-name', 'err-disc-first-name');
+      clearState('group-disc-work-email', 'err-disc-work-email');
+      clearState('group-disc-phone-number', 'err-disc-phone-number');
+      clearState('group-disc-need', 'err-disc-need');
+      clearState('group-disc-help', 'err-disc-help');
+      clearState('group-disc-details', 'err-disc-details');
+      
+      if (discoveryForm) {
+        discoveryForm.reset();
+      }
+    }
+  }
+
+  if (getEstimateBtn) {
+    getEstimateBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  }
+
+  const openDiscoveryBtns = document.querySelectorAll('.open-discovery-btn');
+  openDiscoveryBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (discoveryModalClose) {
+    discoveryModalClose.addEventListener('click', closeModal);
+  }
+
+  if (discoveryModalBackdrop) {
+    discoveryModalBackdrop.addEventListener('click', closeModal);
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && discoveryModal && discoveryModal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // DISCOVERY FORM VALIDATION
+  function validateDiscFirstName() {
+    const input = document.getElementById('disc-first-name');
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      setError('group-disc-first-name', 'err-disc-first-name', '⚠ First name is required.');
+      return false;
+    }
+    if (val.length < 2) {
+      setError('group-disc-first-name', 'err-disc-first-name', '⚠ Name must be at least 2 characters.');
+      return false;
+    }
+    setValid('group-disc-first-name', 'err-disc-first-name');
+    return true;
+  }
+
+  function validateDiscWorkEmail() {
+    const input = document.getElementById('disc-work-email');
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      setError('group-disc-work-email', 'err-disc-work-email', '⚠ Work email is required.');
+      return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(val)) {
+      setError('group-disc-work-email', 'err-disc-work-email', '⚠ Enter a valid email address.');
+      return false;
+    }
+    setValid('group-disc-work-email', 'err-disc-work-email');
+    return true;
+  }
+
+  function validateDiscPhone() {
+    const input = document.getElementById('disc-phone-number');
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      setError('group-disc-phone-number', 'err-disc-phone-number', '⚠ Phone number is required.');
+      return false;
+    }
+    const digits = val.replace(/[\s\-().]/g, '');
+    if (!/^\d{7,15}$/.test(digits)) {
+      setError('group-disc-phone-number', 'err-disc-phone-number', '⚠ Enter a valid phone number (7–15 digits).');
+      return false;
+    }
+    setValid('group-disc-phone-number', 'err-disc-phone-number');
+    return true;
+  }
+
+  function validateDiscNeed() {
+    const selected = document.querySelector('input[name="what-need"]:checked');
+    if (!selected) {
+      setError('group-disc-need', 'err-disc-need', '⚠ Please select what best describes what you need.');
+      return false;
+    }
+    setValid('group-disc-need', 'err-disc-need');
+    return true;
+  }
+
+  function validateDiscHelp() {
+    const checked = document.querySelectorAll('input[name="help-with"]:checked');
+    if (checked.length === 0) {
+      setError('group-disc-help', 'err-disc-help', '⚠ Please select what you need help with.');
+      return false;
+    }
+    setValid('group-disc-help', 'err-disc-help');
+    return true;
+  }
+
+  function validateDiscDetails() {
+    const input = document.getElementById('disc-project-details');
+    if (!input) return true;
+    const val = input.value.trim();
+    if (!val) {
+      setError('group-disc-details', 'err-disc-details', '⚠ Project details are required.');
+      return false;
+    }
+    if (val.length < 10) {
+      setError('group-disc-details', 'err-disc-details', '⚠ Please share a bit more detail (min 10 characters).');
+      return false;
+    }
+    setValid('group-disc-details', 'err-disc-details');
+    return true;
+  }
+
+  // Real-time (blur & input)
+  const discFirstNameInput = document.getElementById('disc-first-name');
+  const discWorkEmailInput = document.getElementById('disc-work-email');
+  const discPhoneInput = document.getElementById('disc-phone-number');
+  const discDetailsInput = document.getElementById('disc-project-details');
+  const discNeedRadios = document.querySelectorAll('input[name="what-need"]');
+  const discHelpCheckboxes = document.querySelectorAll('input[name="help-with"]');
+
+  if (discFirstNameInput) {
+    discFirstNameInput.addEventListener('blur', validateDiscFirstName);
+    discFirstNameInput.addEventListener('input', () => {
+      const grp = document.getElementById('group-disc-first-name');
+      if (grp && grp.classList.contains('is-error')) validateDiscFirstName();
+    });
+  }
+
+  if (discWorkEmailInput) {
+    discWorkEmailInput.addEventListener('blur', validateDiscWorkEmail);
+    discWorkEmailInput.addEventListener('input', () => {
+      const grp = document.getElementById('group-disc-work-email');
+      if (grp && grp.classList.contains('is-error')) validateDiscWorkEmail();
+    });
+  }
+
+  if (discPhoneInput) {
+    discPhoneInput.addEventListener('blur', validateDiscPhone);
+    discPhoneInput.addEventListener('input', () => {
+      const grp = document.getElementById('group-disc-phone-number');
+      if (grp && grp.classList.contains('is-error')) validateDiscPhone();
+    });
+  }
+
+  if (discDetailsInput) {
+    discDetailsInput.addEventListener('blur', validateDiscDetails);
+    discDetailsInput.addEventListener('input', () => {
+      const grp = document.getElementById('group-disc-details');
+      if (grp && grp.classList.contains('is-error')) validateDiscDetails();
+    });
+  }
+
+  discNeedRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      const grp = document.getElementById('group-disc-need');
+      if (grp && grp.classList.contains('is-error')) validateDiscNeed();
+    });
+  });
+
+  discHelpCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const grp = document.getElementById('group-disc-help');
+      if (grp && grp.classList.contains('is-error')) validateDiscHelp();
+    });
+  });
+
+  // Discovery Form Submit
+  if (discoveryForm) {
+    discoveryForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const isNameOk = validateDiscFirstName();
+      const isEmailOk = validateDiscWorkEmail();
+      const isPhoneOk = validateDiscPhone();
+      const isNeedOk = validateDiscNeed();
+      const isHelpOk = validateDiscHelp();
+      const isDetailsOk = validateDiscDetails();
+
+      const submitBtn = document.getElementById('disc-submit-btn');
+      const btnText = submitBtn ? submitBtn.querySelector('span') : null;
+
+      if (!isNameOk || !isEmailOk || !isPhoneOk || !isNeedOk || !isHelpOk || !isDetailsOk) {
+        if (submitBtn && btnText) {
+          submitBtn.classList.add('btn-error', 'shake');
+          const originalTxt = btnText.textContent;
+          btnText.textContent = 'Fix errors above';
+
+          setTimeout(() => {
+            submitBtn.classList.remove('shake', 'btn-error');
+            btnText.textContent = originalTxt;
+          }, 2500);
+        }
+
+        // Scroll to first error inside modal content
+        if (discoveryModal) {
+          const firstError = discoveryModal.querySelector('.field-group.is-error');
+          if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+        return;
+      }
+
+      // Valid form submission simulation
+      if (submitBtn && btnText) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.75';
+        submitBtn.style.pointerEvents = 'none';
+        const originalTxt = btnText.textContent;
+        btnText.textContent = 'Sending...';
+
+        setTimeout(() => {
+          submitBtn.classList.add('btn-success');
+          submitBtn.style.opacity = '1';
+          btnText.textContent = '✓ Discovery Session Booked!';
+
+          setTimeout(() => {
+            closeModal();
+            // Reset button
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '';
+            submitBtn.style.pointerEvents = '';
+            submitBtn.classList.remove('btn-success');
+            btnText.textContent = originalTxt;
+          }, 2000);
+        }, 1600);
       }
     });
   }
