@@ -8510,9 +8510,9 @@ body {
 .how-we-work-section {
   position: relative;
   padding: 100px 0;
-  background: linear-gradient(135deg, #f0f5ff 0%, #f8fafc 50%, #f0fdf4 100%);
-  border-top: 1px solid rgba(59, 130, 246, 0.08);
-  border-bottom: 1px solid rgba(59, 130, 246, 0.08);
+  background: linear-gradient(135deg, #eef2ff 0%, #f0f5ff 50%, #e0e7ff 100%);
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
   overflow: hidden;
   font-family: 'Outfit', sans-serif;
 }
@@ -8538,27 +8538,27 @@ body {
 }
 
 .work-bg-glow-1 {
-  width: 480px;
-  height: 480px;
+  width: 500px;
+  height: 500px;
   top: -120px;
   right: -80px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(59, 130, 246, 0.08) 60%, transparent 100%);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(59, 130, 246, 0.12) 60%, transparent 100%);
 }
 
 .work-bg-glow-2 {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   bottom: -100px;
   left: -60px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.14) 0%, rgba(59, 130, 246, 0.06) 60%, transparent 100%);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, rgba(59, 130, 246, 0.1) 60%, transparent 100%);
 }
 
 .work-bg-glow-3 {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   top: 40%;
   left: 38%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
 }
 
 
