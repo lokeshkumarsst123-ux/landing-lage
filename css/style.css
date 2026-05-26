@@ -8504,300 +8504,199 @@ body {
 }
 
 /* ==========================================================================
-   HOW WE WORK TIMELINE SECTION
+   HOW WE WORK SECTION
    ========================================================================== */
+
 .how-we-work-section {
   position: relative;
-  padding: 120px 0;
-  background: radial-gradient(circle at 50% 30%, #f0f4ff 0%, #e0e7ff 60%, #f3e8ff 100%);
-  border-top: 1px solid rgba(59, 130, 246, 0.08);
-  border-bottom: 1px solid rgba(59, 130, 246, 0.08);
+  padding: 100px 0;
+  background: #ffffff;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
   overflow: hidden;
   font-family: 'Outfit', sans-serif;
 }
 
-.how-we-work-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
-  background-size: 50px 50px;
-  mask-image: radial-gradient(circle at center, black, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.work-bg-glow {
-  position: absolute;
-  width: 700px;
-  height: 700px;
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.85;
-}
-
-.work-bg-glow-1 {
-  top: -150px;
-  right: -150px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.22) 0%, rgba(99, 102, 241, 0) 70%);
-}
-
-.work-bg-glow-2 {
-  bottom: -200px;
-  left: -200px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0) 70%);
-}
-
-.work-bg-glow-3 {
-  top: 20%;
-  right: 25%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0) 70%);
-}
-
-.work-header {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 50px auto;
-  position: relative;
-  z-index: 1;
-}
-
-.work-header h2 {
-  font-size: 42px;
-  font-weight: 850;
-  color: #0f172a;
-  line-height: 1.2;
-  letter-spacing: -1.5px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.work-header .section-subtitle {
-  font-size: 16.5px;
-  color: #334155;
-  line-height: 1.6;
-}
-
-/* Horizontal Tabs Row Capsule */
-/* =============================================
-   HOW WE WORK - CLEAN STEP LAYOUT
-   ============================================= */
-
-.work-steps-container {
-  max-width: 820px;
+/* Two-column layout */
+.hww-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+  max-width: 1100px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-/* Step Nav Row */
-.work-steps-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  margin-bottom: 48px;
+/* LEFT side */
+.hww-left {
+  position: sticky;
+  top: 100px;
 }
 
-.step-connector {
-  flex: 1;
-  height: 1px;
-  background: rgba(59, 130, 246, 0.15);
-  max-width: 60px;
+.hww-overline {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #3b82f6;
+  margin-bottom: 16px;
 }
 
-.work-step-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0 4px;
-  outline: none;
+.hww-heading {
+  font-size: 40px;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.18;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.hww-sub {
+  font-size: 15.5px;
+  color: #64748b;
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+
+.hww-cta {
+  display: inline-flex;
+}
+
+/* RIGHT side - vertical timeline */
+.hww-right {
   position: relative;
 }
 
-.step-num {
-  width: 44px;
-  height: 44px;
+.hww-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Vertical line */
+.hww-timeline::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 20px;
+  bottom: 20px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(59,130,246,0.15), rgba(16,185,129,0.15));
+}
+
+/* Each step row */
+.hww-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.hww-step:first-child {
+  padding-top: 0;
+}
+
+.hww-step.last {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hww-step:hover .hww-step-body h3 {
+  color: #2563eb;
+}
+
+/* Icon circle */
+.hww-step-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   border-radius: 50%;
-  background: #ffffff;
+  background: rgba(59, 130, 246, 0.07);
   border: 1.5px solid rgba(59, 130, 246, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
-  font-weight: 800;
-  color: #94a3b8;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-
-.step-name {
-  font-size: 11.5px;
-  font-weight: 700;
-  color: #94a3b8;
-  white-space: nowrap;
-  transition: color 0.3s ease;
-  letter-spacing: 0.2px;
-}
-
-/* Hover */
-.work-step-btn:hover .step-num {
-  border-color: #3b82f6;
   color: #3b82f6;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
 }
 
-.work-step-btn:hover .step-name {
-  color: #3b82f6;
-}
-
-/* Active */
-.work-step-btn.active .step-num {
+.hww-step:hover .hww-step-icon {
   background: #3b82f6;
   border-color: #3b82f6;
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.28);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
 }
 
-.work-step-btn.active .step-name {
-  color: #2563eb;
+/* Step text */
+.hww-step-body {
+  padding-top: 6px;
 }
 
-/* Completed */
-.work-step-btn.completed .step-num {
-  background: #10b981;
-  border-color: #10b981;
-  color: #ffffff;
-}
-
-.work-step-btn.completed .step-name {
-  color: #10b981;
-}
-
-/* Step Content Area */
-.work-steps-content {
-  position: relative;
-  min-height: 160px;
-}
-
-.work-step-pane {
-  display: none;
-}
-
-.work-step-pane.active {
-  display: block;
-  animation: stepFadeUp 0.4s ease forwards;
-}
-
-@keyframes stepFadeUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.step-pane-inner {
-  display: flex;
-  align-items: flex-start;
-  gap: 28px;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(59, 130, 246, 0.1);
-  border-radius: 20px;
-  padding: 36px 40px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.04);
-  transition: all 0.3s ease;
-}
-
-.step-pane-inner:hover {
-  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.08);
-  border-color: rgba(59, 130, 246, 0.18);
-}
-
-.step-icon-wrap {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
-  border-radius: 14px;
-  background: rgba(59, 130, 246, 0.07);
-  border: 1px solid rgba(59, 130, 246, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #3b82f6;
-  margin-top: 2px;
-}
-
-.step-pane-text h3 {
-  font-size: 22px;
+.hww-step-body h3 {
+  font-size: 18px;
   font-weight: 800;
   color: #0f172a;
-  letter-spacing: -0.5px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+  transition: color 0.25s ease;
 }
 
-.step-pane-text p {
-  font-size: 15.5px;
-  color: #475569;
+.hww-step-body p {
+  font-size: 14.5px;
+  color: #64748b;
   line-height: 1.7;
   margin: 0;
 }
 
-/* CTA */
-.work-steps-cta {
-  text-align: center;
-  margin-top: 40px;
-}
-
 /* Responsive */
-@media (max-width: 768px) {
-  .work-steps-nav {
-    gap: 0;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
+@media (max-width: 900px) {
+  .hww-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
 
-  .work-steps-nav::-webkit-scrollbar { display: none; }
-
-  .step-connector {
-    max-width: 24px;
-    min-width: 16px;
+  .hww-left {
+    position: static;
+    text-align: center;
   }
 
-  .step-num {
-    width: 38px;
-    height: 38px;
-    font-size: 12px;
+  .hww-heading {
+    font-size: 32px;
   }
 
-  .step-name {
-    font-size: 10px;
-  }
-
-  .step-pane-inner {
-    flex-direction: column;
-    gap: 18px;
-    padding: 28px 24px;
-  }
-
-  .step-pane-text h3 {
-    font-size: 19px;
-  }
-
-  .step-pane-text p {
-    font-size: 14.5px;
+  .hww-cta {
+    margin: 0 auto;
   }
 }
+
+@media (max-width: 480px) {
+  .how-we-work-section {
+    padding: 70px 0;
+  }
+
+  .hww-heading {
+    font-size: 28px;
+  }
+
+  .hww-step-body h3 {
+    font-size: 16px;
+  }
+
+  .hww-step {
+    gap: 16px;
+  }
+}
+
 
 /* RESPONSIVE TIMELINE QUERIES */
 @media (max-width: 992px) {
