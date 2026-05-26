@@ -672,4 +672,228 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // CUSTOM COUNTRY CODE DROPDOWN
+  function initCustomSelect(containerId, hiddenSelectId) {
+    const customSelect = document.getElementById(containerId);
+    if (!customSelect) return;
+    
+    const trigger = customSelect.querySelector('.custom-select-trigger');
+    const options = customSelect.querySelectorAll('.custom-option');
+    const hiddenSelect = document.getElementById(hiddenSelectId);
+    if (!hiddenSelect || !trigger) return;
+    
+    const selectedFlag = trigger.querySelector('.flag-img');
+    const selectedCode = trigger.querySelector('.selected-code');
+
+    // Toggle dropdown visibility
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // Close other open selects
+      document.querySelectorAll('.custom-select').forEach(sel => {
+        if (sel !== customSelect) sel.classList.remove('open');
+      });
+      customSelect.classList.toggle('open');
+    });
+
+    // Option selection
+    options.forEach(option => {
+      option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const val = option.getAttribute('data-value');
+        const flag = option.getAttribute('data-flag');
+        
+        // Update hidden select and trigger change event
+        hiddenSelect.value = val;
+        hiddenSelect.dispatchEvent(new Event('change', { bubbles: true }));
+        
+        // Update custom trigger UI
+        selectedFlag.src = `https://flagcdn.com/w40/${flag}.png`;
+        selectedFlag.alt = flag.toUpperCase();
+        selectedCode.textContent = val;
+        
+        // Update selected class
+        options.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+        
+        // Close dropdown
+        customSelect.classList.remove('open');
+      });
+    });
+  }
+
+  // Initialize both selects
+  initCustomSelect('phone-code-select', 'country-code');
+  initCustomSelect('contact-phone-code-select', 'contact-country-code');
+
+  // Close dropdowns on clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.custom-select').forEach(sel => {
+      sel.classList.remove('open');
+    });
+  });
+
+  // AI-NATIVE WORKFLOW INTERACTIVE PANEL
+  const stepCards = document.querySelectorAll('.ai-step-card');
+  const visualPanes = document.querySelectorAll('.ai-visual-pane');
+
+  if (stepCards.length > 0 && visualPanes.length > 0) {
+    stepCards.forEach(card => {
+      const activateStep = () => {
+        const stepName = card.getAttribute('data-step');
+        
+        // Remove active class from all cards and panes
+        stepCards.forEach(c => c.classList.remove('active'));
+        visualPanes.forEach(p => p.classList.remove('active'));
+        
+        // Add active class to selected card and matching pane
+        card.classList.add('active');
+        const targetPane = document.getElementById(`pane-${stepName}`);
+        if (targetPane) {
+          targetPane.classList.add('active');
+        }
+      };
+
+      card.addEventListener('mouseenter', activateStep);
+      card.addEventListener('click', activateStep);
+    });
+  }
+
+  // BUILT TO LAST INTERACTIVE STACK
+  const lastSteps = document.querySelectorAll('.last-timeline-step');
+  const stackLayers = document.querySelectorAll('.stack-layer');
+  const progressActive = document.getElementById('timelineProgressActive');
+
+  function updateLastStep(stepName) {
+    if (!progressActive) return;
+
+    // Reset active states
+    lastSteps.forEach(card => card.classList.remove('active'));
+    stackLayers.forEach(layer => layer.classList.remove('active'));
+
+    // Set active states
+    const activeCard = document.querySelector(`.last-timeline-step[data-last-step="${stepName}"]`);
+    const activeLayer = document.querySelector(`.stack-layer[data-layer-target="${stepName}"]`);
+
+    if (activeCard && activeLayer) {
+      activeCard.classList.add('active');
+      activeLayer.classList.add('active');
+
+      // Update progress bar height based on selection
+      if (stepName === 'downloads') {
+        progressActive.style.height = '0%';
+      } else if (stepName === 'ai') {
+        progressActive.style.height = '25%';
+      } else if (stepName === 'experience') {
+        progressActive.style.height = '50%';
+      } else if (stepName === 'scalability') {
+        progressActive.style.height = '75%';
+      } else if (stepName === 'growth') {
+        progressActive.style.height = '100%';
+      }
+    }
+  }
+
+  // Left timeline step events
+  lastSteps.forEach(step => {
+    step.addEventListener('mouseenter', () => {
+      const stepName = step.getAttribute('data-last-step');
+      updateLastStep(stepName);
+    });
+
+    step.addEventListener('click', () => {
+      const stepName = step.getAttribute('data-last-step');
+      updateLastStep(stepName);
+    });
+  });
+
+  // Right stack layer events removed so only left hover/click activates them
+
+  // HOW WE WORK INTERACTIVE TABS & VIEWPANE SYNC
+  const workTabs = document.querySelectorAll('.work-tab');
+  const workInfoPanes = document.querySelectorAll('.work-info-pane');
+  const workVisualPanes = document.querySelectorAll('.work-visual-pane');
+
+  function updateWorkTab(stepName) {
+    // Reset active classes
+    workTabs.forEach(tab => tab.classList.remove('active'));
+    workInfoPanes.forEach(pane => pane.classList.remove('active'));
+    workVisualPanes.forEach(pane => pane.classList.remove('active'));
+
+    // Set active tab & panes
+    const activeTab = document.querySelector(`.work-tab[data-work-tab="${stepName}"]`);
+    const activeInfoPane = document.getElementById(`work-info-${stepName}`);
+    const activeVisualPane = document.getElementById(`work-pane-${stepName}`);
+
+    if (activeTab && activeInfoPane && activeVisualPane) {
+      activeTab.classList.add('active');
+      activeInfoPane.classList.add('active');
+      activeVisualPane.classList.add('active');
+    }
+  }
+
+  workTabs.forEach(tab => {
+    tab.addEventListener('mouseenter', () => {
+      const stepName = tab.getAttribute('data-work-tab');
+      updateWorkTab(stepName);
+    });
+
+    tab.addEventListener('click', () => {
+      const stepName = tab.getAttribute('data-work-tab');
+      updateWorkTab(stepName);
+    });
+  });
 });
+
+
+// =============================================
+// CAPABILITIES SECTION � Tab Switcher
+// =============================================
+(function () {
+  const capTabs = document.querySelectorAll('.cap-tab');
+  const capPanels = document.querySelectorAll('.cap-panel');
+
+  if (!capTabs.length) return;
+
+  function switchCapTab(tabName) {
+    capTabs.forEach(t => t.classList.remove('active'));
+    capPanels.forEach(p => p.classList.remove('active'));
+    const activeTab = document.querySelector('.cap-tab[data-cap-tab="' + tabName + '"]');
+    const activePanel = document.getElementById('cap-panel-' + tabName);
+    if (activeTab) activeTab.classList.add('active');
+    if (activePanel) activePanel.classList.add('active');
+  }
+
+  capTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const name = tab.getAttribute('data-cap-tab');
+      switchCapTab(name);
+    });
+  });
+})();
+
+// =============================================
+// CAPABILITIES SECTION � Tab Switcher
+// =============================================
+(function () {
+  var capTabs = document.querySelectorAll('.cap-tab');
+  var capPanels = document.querySelectorAll('.cap-panel');
+
+  if (!capTabs.length) return;
+
+  function switchCapTab(tabName) {
+    capTabs.forEach(function(t) { t.classList.remove('active'); });
+    capPanels.forEach(function(p) { p.classList.remove('active'); });
+    var activeTab = document.querySelector('.cap-tab[data-cap-tab="' + tabName + '"]');
+    var activePanel = document.getElementById('cap-panel-' + tabName);
+    if (activeTab) activeTab.classList.add('active');
+    if (activePanel) activePanel.classList.add('active');
+  }
+
+  capTabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var name = tab.getAttribute('data-cap-tab');
+      switchCapTab(name);
+    });
+  });
+})();
