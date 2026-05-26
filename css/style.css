@@ -337,7 +337,6 @@ body {
 ======================== */
 .hero-desc {
   margin-top: 20px;
-  color: var(--muted);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
@@ -392,7 +391,7 @@ body {
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.65);
+  color: #fff;
   padding: 14px 24px;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -445,7 +444,7 @@ body {
 .stat-label {
   font-size: 12px;
   font-weight: 400;
-  color: var(--muted);
+
   margin-top: 5px;
   letter-spacing: 0.3px;
 }
@@ -2923,6 +2922,20 @@ body {
   transition: all 0.35s ease;
   flex-shrink: 0;
 }
+
+.step-number-glow svg {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), stroke 0.3s ease;
+  display: block;
+}
+
+.stepper-step:hover .step-number-glow svg {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.stepper-step.active .step-number-glow svg {
+  transform: scale(1.05);
+}
+
 
 .step-content {
   display: flex;
@@ -6734,7 +6747,7 @@ body {
 }
 
 .ticker-heading-text {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
   color: #475569;
   text-transform: uppercase;
@@ -9374,6 +9387,7 @@ body {
   padding: 4px 10px;
   border-radius: 6px;
   text-transform: uppercase;
+  display: none;
   letter-spacing: 0.5px;
 }
 
@@ -9393,6 +9407,7 @@ body {
   width: 6px;
   height: 6px;
   background: #ef4444;
+  display: none;
   border-radius: 50%;
   position: relative;
 }
