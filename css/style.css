@@ -2852,7 +2852,7 @@ body {
 }
 
 .stage-section-header .section-subtitle {
-  font-size: 17px;
+  font-size: 18px;
   color: #475569;
   /* Slate 600 */
   line-height: 1.6;
@@ -2976,7 +2976,7 @@ body {
 }
 
 .step-stage-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   color: #1e293b;
   transition: color 0.35s ease;
