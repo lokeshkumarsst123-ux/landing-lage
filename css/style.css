@@ -8545,23 +8545,24 @@ body {
 }
 
 .hww-heading {
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 900;
   color: #0f172a;
-  line-height: 1.18;
-  letter-spacing: -1.5px;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
   margin-bottom: 20px;
 }
 
 .hww-sub {
-  font-size: 15.5px;
+  font-size: 14.5px;
   color: #64748b;
-  line-height: 1.65;
-  margin-bottom: 36px;
+  line-height: 1.7;
+  margin-bottom: 16px;
 }
 
 .hww-cta {
   display: inline-flex;
+  margin-top: 16px;
 }
 
 /* RIGHT side - vertical timeline */
