@@ -809,58 +809,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Right stack layer events removed so only left hover/click activates them
 
-  // HOW WE WORK INTERACTIVE TABS & VIEWPANE SYNC
-  const workTabs = document.querySelectorAll('.work-tab');
-  const workInfoPanes = document.querySelectorAll('.work-info-pane');
-  const workVisualPanes = document.querySelectorAll('.work-visual-pane');
-  const workStepperProgress = document.getElementById('workStepperProgress');
+  // HOW WE WORK - CLEAN STEP SWITCHER
+  const workStepBtns = document.querySelectorAll('.work-step-btn');
+  const workStepPanes = document.querySelectorAll('.work-step-pane');
 
   const stepOrder = ['validate', 'design', 'scope', 'build', 'launch'];
 
-  function updateWorkTab(stepName) {
+  function updateWorkStep(stepName) {
     const activeIndex = stepOrder.indexOf(stepName);
     if (activeIndex === -1) return;
 
-    // Reset active & completed classes
-    workTabs.forEach((tab, index) => {
-      tab.classList.remove('active');
-      if (index < activeIndex) {
-        tab.classList.add('completed');
-      } else {
-        tab.classList.remove('completed');
+    // Update button states
+    workStepBtns.forEach((btn, index) => {
+      btn.classList.remove('active', 'completed');
+      if (index === activeIndex) {
+        btn.classList.add('active');
+      } else if (index < activeIndex) {
+        btn.classList.add('completed');
       }
     });
 
-    workInfoPanes.forEach(pane => pane.classList.remove('active'));
-    workVisualPanes.forEach(pane => pane.classList.remove('active'));
-
-    // Set active tab & panes
-    const activeTab = document.querySelector(`.work-tab[data-work-tab="${stepName}"]`);
-    const activeInfoPane = document.getElementById(`work-info-${stepName}`);
-    const activeVisualPane = document.getElementById(`work-pane-${stepName}`);
-
-    if (activeTab && activeInfoPane && activeVisualPane) {
-      activeTab.classList.add('active');
-      activeInfoPane.classList.add('active');
-      activeVisualPane.classList.add('active');
-
-      // Update progress bar width
-      if (workStepperProgress) {
-        const percentage = (activeIndex / (stepOrder.length - 1)) * 100;
-        workStepperProgress.style.width = `${percentage}%`;
-      }
-    }
+    // Show correct pane
+    workStepPanes.forEach(pane => pane.classList.remove('active'));
+    const activePane = document.getElementById(`work-info-${stepName}`);
+    if (activePane) activePane.classList.add('active');
   }
 
-  workTabs.forEach(tab => {
-    tab.addEventListener('mouseenter', () => {
-      const stepName = tab.getAttribute('data-work-tab');
-      updateWorkTab(stepName);
-    });
-
-    tab.addEventListener('click', () => {
-      const stepName = tab.getAttribute('data-work-tab');
-      updateWorkTab(stepName);
+  workStepBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const stepName = btn.getAttribute('data-work-tab');
+      updateWorkStep(stepName);
     });
   });
 });
