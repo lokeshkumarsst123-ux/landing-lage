@@ -813,10 +813,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const workTabs = document.querySelectorAll('.work-tab');
   const workInfoPanes = document.querySelectorAll('.work-info-pane');
   const workVisualPanes = document.querySelectorAll('.work-visual-pane');
+  const workStepperProgress = document.getElementById('workStepperProgress');
+
+  const stepOrder = ['validate', 'design', 'scope', 'build', 'launch'];
 
   function updateWorkTab(stepName) {
-    // Reset active classes
-    workTabs.forEach(tab => tab.classList.remove('active'));
+    const activeIndex = stepOrder.indexOf(stepName);
+    if (activeIndex === -1) return;
+
+    // Reset active & completed classes
+    workTabs.forEach((tab, index) => {
+      tab.classList.remove('active');
+      if (index < activeIndex) {
+        tab.classList.add('completed');
+      } else {
+        tab.classList.remove('completed');
+      }
+    });
+
     workInfoPanes.forEach(pane => pane.classList.remove('active'));
     workVisualPanes.forEach(pane => pane.classList.remove('active'));
 
@@ -829,6 +843,12 @@ document.addEventListener('DOMContentLoaded', () => {
       activeTab.classList.add('active');
       activeInfoPane.classList.add('active');
       activeVisualPane.classList.add('active');
+
+      // Update progress bar width
+      if (workStepperProgress) {
+        const percentage = (activeIndex / (stepOrder.length - 1)) * 100;
+        workStepperProgress.style.width = `${percentage}%`;
+      }
     }
   }
 
