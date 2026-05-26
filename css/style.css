@@ -1465,6 +1465,13 @@ body {
     padding: 0 16px !important;
     font-size: 13px !important;
   }
+
+  /* Fix full-image portfolio cards to be perfectly edge-to-edge on mobile, removing any black spaces */
+  .port-bg-papajohns {
+    padding: 0 !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+  }
 }
 
 @media (max-width: 992px) {
