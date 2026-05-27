@@ -474,9 +474,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Open modal automatically on 30% page scroll
   window.addEventListener('scroll', () => {
     if (hasTriggeredScrollModal) return;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollHeight = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight,
+      document.documentElement.offsetHeight,
+      document.body.offsetHeight
+    ) - window.innerHeight;
+    
     if (scrollHeight <= 0) return;
-    const scrolled = (window.scrollY / scrollHeight) * 100;
+    
+    const scrolled = (scrollTop / scrollHeight) * 100;
     if (scrolled >= 30) {
       openModal();
     }
