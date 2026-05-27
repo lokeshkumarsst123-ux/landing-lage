@@ -173,7 +173,7 @@ body {
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -190,7 +190,7 @@ body {
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   padding: 11px 22px;
   border-radius: 100px;
   border: 1px solid var(--border);
@@ -3144,7 +3144,7 @@ body {
 }
 
 .pane-header p {
-  font-size: 16px;
+  font-size: 18px;
   color: #475569;
   line-height: 1.6;
   margin: 0;
@@ -3244,7 +3244,7 @@ body {
 }
 
 .grid-card .card-header h5 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -5870,7 +5870,7 @@ body {
 }
 
 .cta-strip-left h2 {
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -1px;
@@ -5879,11 +5879,11 @@ body {
 }
 
 .cta-strip-left p {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.55);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.75);
   line-height: 1.7;
-  max-width: 480px;
-  margin: 0;
+
+  margin: 0 0 10px;
 }
 
 .cta-strip-right {
@@ -8629,7 +8629,7 @@ body {
 }
 
 .hww-heading {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 900;
   color: #0f172a;
   line-height: 1.2;
@@ -8638,8 +8638,8 @@ body {
 }
 
 .hww-sub {
-  font-size: 15px;
-  color: #475569;
+  font-size: 18px;
+  color: #2e2f30;
   line-height: 1.7;
   margin-bottom: 0;
   text-decoration: none !important;
@@ -8667,16 +8667,16 @@ body {
 }
 
 .hww-stat strong {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 900;
   color: #0f172a;
   letter-spacing: -0.5px;
 }
 
 .hww-stat span {
-  font-size: 11.5px;
+  font-size: 14px;
   font-weight: 600;
-  color: #94a3b8;
+  color: #475569;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -8698,7 +8698,7 @@ body {
   border: none;
   border-radius: 12px;
   padding: 14px 24px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   font-family: 'Outfit', sans-serif;
   cursor: pointer;
@@ -8769,9 +8769,9 @@ body {
 
 /* Icon circle */
 .hww-step-icon {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
   border-radius: 50%;
   background: #ffffff;
   border: 1.5px solid rgba(59, 130, 246, 0.2);
@@ -8787,7 +8787,7 @@ body {
 }
 
 .hww-step-num {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 900;
   color: #3b82f6;
   letter-spacing: -0.3px;
@@ -8809,17 +8809,17 @@ body {
 }
 
 .hww-step-body h3 {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 800;
-  color: #0f172a;
+  color: #2e2f30;
   margin-bottom: 6px;
   letter-spacing: -0.3px;
   transition: color 0.25s ease;
 }
 
 .hww-step-body p {
-  font-size: 14px;
-  color: #64748b;
+  font-size: 18px;
+  color: #2e2f30;
   line-height: 1.7;
   margin: 0;
   text-decoration: none !important;
@@ -9105,7 +9105,7 @@ body {
 
 .fail-card p {
   font-size: 16px;
-  color: #64748b;
+  color: #0f172a;
   line-height: 1.6;
   margin-bottom: 32px;
   flex-grow: 1;
@@ -9407,7 +9407,7 @@ body {
 }
 
 .step-info-card h3 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 800;
   color: #0f172a;
   margin-bottom: 8px;
@@ -9415,7 +9415,7 @@ body {
 }
 
 .step-summary {
-  font-size: 15px;
+  font-size: 18px;
   color: #475569;
   margin-bottom: 20px;
   line-height: 1.5;
@@ -9751,14 +9751,14 @@ body {
 /* Header */
 .capabilities-header {
   text-align: center;
-  max-width: 680px;
+  max-width: 850px;
   margin: 0 auto 60px auto;
   position: relative;
   z-index: 2;
 }
 
 .capabilities-header h2 {
-  font-size: 44px;
+  font-size: 48px;
   font-weight: 850;
   color: #0f172a;
   line-height: 1.15;
@@ -9768,7 +9768,7 @@ body {
 }
 
 .capabilities-header .section-subtitle {
-  font-size: 16.5px;
+  font-size: 18px;
   color: #475569;
   line-height: 1.6;
 }
@@ -9799,8 +9799,8 @@ body {
   border-radius: 10px;
   font-weight: 700;
   font-family: 'Outfit', sans-serif;
-  color: #64748b;
-  font-size: 14px;
+  color: #0f172a;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
@@ -9968,7 +9968,7 @@ body {
 
 /* Card body text */
 .cap-card h3 {
-  font-size: 15.5px;
+  font-size: 18px;
   font-weight: 800;
   color: #0f172a;
   line-height: 1.35;
@@ -9977,8 +9977,8 @@ body {
 }
 
 .cap-card p {
-  font-size: 13.5px;
-  color: #64748b;
+  font-size: 16px;
+  color: #37383a;
   line-height: 1.65;
   flex-grow: 1;
   margin-bottom: 0;
@@ -9997,7 +9997,7 @@ body {
 .cap-meta-label {
   font-size: 9.5px;
   font-weight: 800;
-  color: #94a3b8;
+  color: #37383a;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: block;
@@ -10075,9 +10075,9 @@ body {
 }
 
 .solutions-title {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
-  color: #94a3b8;
+  color: #0f172a;
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
@@ -10089,7 +10089,7 @@ body {
 }
 
 .sol-pill {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: #475569;
   background: rgba(15, 23, 42, 0.03);
@@ -10138,5 +10138,82 @@ body {
 
   .reviews-slider {
     padding: 0 !important;
+  }
+}
+
+/* Grid Card Typography */
+.grid-card h5 {
+  color: #0f172a;
+  text-transform: none;
+  font-size: 16px;
+}
+
+.grid-card p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Custom Portfolio Mockup */
+.custom-port-mockup {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.custom-port-mockup .mockup-base {
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  border-radius: 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.custom-port-mockup .mockup-float-1 {
+  position: absolute;
+  top: 15%;
+  right: 0%;
+  width: 220px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.custom-port-mockup .mockup-float-2 {
+  position: absolute;
+  bottom: 5%;
+  left: 0%;
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.custom-port-mockup:hover .mockup-float-1 {
+  transform: translateY(-10px) translateX(5px);
+}
+
+.custom-port-mockup:hover .mockup-float-2 {
+  transform: translateY(10px) translateX(-5px);
+}
+
+@media (max-width: 768px) {
+  .custom-port-mockup .mockup-float-1 {
+    right: -5%;
+    width: 160px;
+  }
+
+  .custom-port-mockup .mockup-float-2 {
+    left: 0;
+    width: 140px;
   }
 }
