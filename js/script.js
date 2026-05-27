@@ -413,10 +413,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const discoveryModalBackdrop = document.getElementById('discovery-modal-backdrop');
   const discoveryForm = document.getElementById('discoveryForm');
 
+  let hasTriggeredScrollModal = false;
+
   function openModal() {
     if (discoveryModal) {
       discoveryModal.classList.add('active');
       document.body.style.overflow = 'hidden';
+      hasTriggeredScrollModal = true;
     }
   }
 
@@ -465,6 +468,17 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && discoveryModal && discoveryModal.classList.contains('active')) {
       closeModal();
+    }
+  });
+
+  // Open modal automatically on 30% page scroll
+  window.addEventListener('scroll', () => {
+    if (hasTriggeredScrollModal) return;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollHeight <= 0) return;
+    const scrolled = (window.scrollY / scrollHeight) * 100;
+    if (scrolled >= 30) {
+      openModal();
     }
   });
 

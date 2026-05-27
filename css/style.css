@@ -7067,12 +7067,11 @@ body {
   max-width: 620px;
   max-height: 90vh;
   overflow-y: auto;
-  background: #faf8f5;
-  /* Light warm premium background to match screen form theme */
+  background: linear-gradient(185deg, #ffffff 0%, #f8faff 100%);
   border-radius: 24px;
-  padding: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  padding: 44px 40px;
+  border: 1.5px solid rgba(59, 130, 246, 0.1);
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.15);
   transform: scale(0.9) translateY(20px);
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   z-index: 10;
@@ -7125,20 +7124,23 @@ body {
 
 .discovery-modal-header {
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .discovery-modal-header h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #050522;
-  letter-spacing: -0.5px;
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
   line-height: 1.25;
 }
 
 .discovery-modal-header p {
-  font-size: 14.5px;
+  font-size: 15px;
   color: #64748b;
-  margin-top: 8px;
+  margin-top: 10px;
   line-height: 1.5;
 }
 
@@ -7151,11 +7153,11 @@ body {
 }
 
 #discoveryForm .field-group label {
-  font-size: 14px;
-  font-weight: 700;
-  color: #050522;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
   text-transform: none;
-  letter-spacing: normal;
+  letter-spacing: 0.2px;
   display: inline-flex;
   align-items: center;
 }
@@ -7171,44 +7173,46 @@ body {
 #discoveryForm input[type="text"],
 #discoveryForm input[type="email"],
 #discoveryForm input[type="tel"] {
-  border: none;
-  border-bottom: 1.5px solid #cbd5e1;
-  border-radius: 0;
-  background: transparent;
-  padding: 10px 0;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 12px 16px;
   height: auto;
   font-size: 15px;
-  color: #050522;
+  color: #0f172a;
   font-family: 'Outfit', sans-serif;
   outline: none;
-  transition: border-color 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 2px 4px rgba(15, 23, 42, 0.02);
 }
 
 #discoveryForm input[type="text"]:focus,
 #discoveryForm input[type="email"]:focus,
 #discoveryForm input[type="tel"]:focus {
-  border-bottom-color: #4F6EF7;
-  background: transparent;
-  box-shadow: none;
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), inset 0 2px 4px rgba(15, 23, 42, 0.01);
 }
 
 #discoveryForm textarea {
   width: 100%;
-  border: none;
-  border-bottom: 1.5px solid #cbd5e1;
-  border-radius: 0;
-  background: transparent;
-  padding: 10px 0;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 12px 16px;
   resize: vertical;
   outline: none;
   font-family: 'Outfit', sans-serif;
   font-size: 15px;
-  color: #050522;
-  transition: border-color 0.25s ease;
+  color: #0f172a;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 2px 4px rgba(15, 23, 42, 0.02);
 }
 
 #discoveryForm textarea:focus {
-  border-bottom-color: #4F6EF7;
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), inset 0 2px 4px rgba(15, 23, 42, 0.01);
 }
 
 /* Radio button option cards */
@@ -7235,15 +7239,15 @@ body {
 
 .need-option-card {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
   padding: 16px 20px;
   font-size: 14px;
-  font-weight: 600;
-  color: #334155;
+  font-weight: 500;
+  color: #475569;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
@@ -7260,10 +7264,10 @@ body {
 }
 
 .need-option input[type="radio"]:checked+.need-option-card {
-  border-color: #4F6EF7;
-  background: rgba(79, 110, 247, 0.05);
-  color: #050522;
-  box-shadow: 0 0 0 4px rgba(79, 110, 247, 0.1), 0 4px 12px rgba(79, 110, 247, 0.05);
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.04) 0%, rgba(16, 185, 129, 0.02) 100%);
+  color: #1e3a8a;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 0 8px 20px rgba(59, 130, 246, 0.05);
 }
 
 /* Checkbox pill chips */
@@ -7316,7 +7320,7 @@ body {
 /* Error message styling inside modal */
 #discoveryForm .field-group.is-error input,
 #discoveryForm .field-group.is-error textarea {
-  border-bottom-color: #ef4444 !important;
+  border-color: #ef4444 !important;
 }
 
 #discoveryForm .field-group.is-error .need-option-card {
@@ -7344,13 +7348,13 @@ body {
 #discoveryForm .submit-btn {
   width: auto;
   min-width: 260px;
-  height: 52px;
-  border-radius: 100px;
-  background: #050522;
+  height: 54px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: #ffffff;
   font-family: 'Outfit', sans-serif;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 0 36px;
   cursor: pointer;
   display: flex;
@@ -7358,14 +7362,14 @@ body {
   justify-content: center;
   margin-top: 32px;
   border: none;
-  box-shadow: 0 4px 14px rgba(5, 5, 34, 0.2);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #discoveryForm .submit-btn:hover {
-  background: #0d1224;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(5, 5, 34, 0.35);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.35);
 }
 
 #discoveryForm .submit-btn:active {
@@ -10961,5 +10965,34 @@ body {
 
   .contact-section .form-card {
     margin-top: 0;
+  }
+
+  /* Discovery Modal Mobile Optimization */
+  .discovery-modal-content {
+    padding: 32px 20px !important;
+    max-height: 95vh !important;
+  }
+
+  .discovery-modal-header h2 {
+    font-size: 24px !important;
+  }
+
+  .discovery-modal-header p {
+    font-size: 13.5px !important;
+  }
+
+  #discoveryForm input[type="text"],
+  #discoveryForm input[type="email"],
+  #discoveryForm input[type="tel"],
+  #discoveryForm textarea {
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+  }
+
+  #discoveryForm .submit-btn {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 50px !important;
+    padding: 0 20px !important;
   }
 }
