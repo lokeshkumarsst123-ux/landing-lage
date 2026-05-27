@@ -10919,11 +10919,39 @@ body {
   }
 
   .growth-map-wrapper {
-
     gap: 10px;
   }
 
   .last-timeline-step {
-    gap: 13px;
+    gap: 16px;
+  }
+
+  /* Prevent timeline bullet clipping on mobile */
+  .last-timeline-steps {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .timeline-progress-line {
+    left: 33px !important;
+  }
+
+  /* Stats row mobile layout: vertical stack for readability */
+  .hww-stats {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 20px !important;
+    align-items: stretch !important;
+  }
+
+  .hww-stat {
+    flex: none;
+    text-align: center;
+  }
+
+  .hww-stat-divider {
+    width: 100% !important;
+    height: 1px !important;
+    background: rgba(15, 23, 42, 0.08);
   }
 }
