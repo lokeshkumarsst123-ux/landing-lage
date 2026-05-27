@@ -10647,6 +10647,8 @@ body {
 
   .new-port-item,
   .new-port-item.reverse {
+    position: relative !important;
+    top: auto !important;
     flex-direction: column;
     text-align: center;
     gap: 40px;
