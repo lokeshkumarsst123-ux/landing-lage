@@ -10815,6 +10815,12 @@ body {
   fill: currentColor;
 }
 
+.store-link svg *,
+.store-link svg g,
+.store-link svg path {
+  fill: currentColor !important;
+}
+
 @media (max-width: 768px) {
   .port-store-links {
     justify-content: center;
