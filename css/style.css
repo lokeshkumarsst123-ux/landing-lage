@@ -10954,4 +10954,12 @@ body {
     height: 1px !important;
     background: rgba(15, 23, 42, 0.08);
   }
+
+  .contact-left {
+    margin-bottom: 0px;
+  }
+
+  .contact-section .form-card {
+    margin-top: 0;
+  }
 }
