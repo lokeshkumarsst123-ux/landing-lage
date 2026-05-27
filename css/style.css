@@ -10917,4 +10917,13 @@ body {
     line-height: 1.25 !important;
     letter-spacing: -0.6px !important;
   }
+
+  .growth-map-wrapper {
+
+    gap: 10px;
+  }
+
+  .last-timeline-step {
+    gap: 13px;
+  }
 }
