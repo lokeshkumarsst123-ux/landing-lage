@@ -7252,9 +7252,26 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
-.need-option-card .icon {
-  font-size: 18px;
+.need-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.06);
+  color: #3b82f6;
   flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.need-option:hover .need-icon-wrapper {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.need-option input[type="radio"]:checked+.need-option-card .need-icon-wrapper {
+  background: #3b82f6;
+  color: #ffffff;
 }
 
 .need-option:hover .need-option-card {
