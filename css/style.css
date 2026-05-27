@@ -10776,3 +10776,105 @@ body {
     margin-bottom: 28px !important;
   }
 }
+/* ========================
+   PORTFOLIO STORE LINKS
+======================== */
+.port-store-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.store-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 50%;
+  color: #334155;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.store-link:hover {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+}
+
+.store-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .port-store-links {
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .store-link {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ========================
+   VIEW ALL PORTFOLIO BUTTON
+======================== */
+.new-port-footer-action {
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.view-all-portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blue, #3b82f6);
+  color: #fff !important;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none !important;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+  transition: all 0.3s ease;
+}
+
+.view-all-portfolio-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+}
+
+.view-all-portfolio-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.view-all-portfolio-btn:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .new-port-footer-action {
+    margin-top: 40px;
+  }
+  
+  .view-all-portfolio-btn {
+    padding: 14px 28px;
+    font-size: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+}
