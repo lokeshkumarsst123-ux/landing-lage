@@ -1413,10 +1413,11 @@ body {
   /* Stepped Timeline Mobile Optimization */
   .last-timeline-steps {
     gap: 20px;
+    padding-left: 10px;
   }
 
   .timeline-progress-line {
-    left: 20px;
+    left: 31px;
     top: 25px;
     bottom: 25px;
     width: 3px;
@@ -10885,5 +10886,35 @@ body {
     font-size: 15px;
     width: 100%;
     justify-content: center;
+  }
+
+  .cta-strip-btn {
+    width: auto;
+  }
+
+  .new-port-list {
+    gap: 0;
+  }
+
+  /* Global section heading overrides for mobile */
+  .section-header h2,
+  .stage-section-header h2,
+  .new-port-header h2,
+  .clients-header h2,
+  .awards-header h2,
+  .last-header h2,
+  .services-section-header h2,
+  .why-header h2,
+  .reviews-text h2,
+  .port-header h2,
+  .portfolio-header h2,
+  .process-header h2,
+  .ai-header h2,
+  .work-header h2,
+  .fail-header h2,
+  .capabilities-header h2 {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.6px !important;
   }
 }
